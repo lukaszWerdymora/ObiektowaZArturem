@@ -4,7 +4,10 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
+
     KsiazkaAdresowa ksiazkaadresowa;
+    ksiazkaadresowa.rejstracjaUzytkownika();
+    ksiazkaadresowa.rejstracjaUzytkownika();
+    ksiazkaadresowa.wypiszWszystkichUzytkownikow();
     return 0;
 }
