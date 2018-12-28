@@ -6,8 +6,9 @@ int main()
 {
 
     KsiazkaAdresowa ksiazkaadresowa;
-    ksiazkaadresowa.rejstracjaUzytkownika();
-    ksiazkaadresowa.rejstracjaUzytkownika();
-    ksiazkaadresowa.wypiszWszystkichUzytkownikow();
+    ksiazkaadresowa.wypiszWszystkichUzytkonikow();
+    ksiazkaadresowa.rejestracjaUzytkownika();
+    //ksiazkaadresowa.rejestracjaUzytkownika();
+    ksiazkaadresowa.wypiszWszystkichUzytkonikow();
     return 0;
 }
