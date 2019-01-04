@@ -1,1 +1,2 @@
 1|jaw|asd|
+2|kluczyk|zamek|
