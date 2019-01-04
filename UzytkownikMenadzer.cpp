@@ -94,9 +94,9 @@ int UzytkownikMenadzer :: logowanieUzytkownika()
                 {
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
-                    return itr-> Uzytkownik :: pobierzId();
-
-                    //return itr -> id;
+                    idZalogowanegoUzytkownika = itr-> Uzytkownik :: pobierzId();
+                    return idZalogowanegoUzytkownika;
+                    //return itr-> Uzytkownik :: pobierzId();
                 }
             }
             cout << "Wprowadzono 3 razy bledne haslo." << endl;
@@ -109,4 +109,54 @@ int UzytkownikMenadzer :: logowanieUzytkownika()
     system("pause");
     return 0;
 }
+void UzytkownikMenadzer :: zmianaHaslaZalogowanegoUzytkownika(/*int idZalogowanegoUzytkownika*/)// tu moze chyba byc bez parametru
+{
+    string noweHaslo = "";
+    cout << "Podaj nowe haslo: ";
+    cin >> noweHaslo;
 
+    for (vector <Uzytkownik>::iterator itr = uzytkownicy.begin(); itr != uzytkownicy.end(); itr++)
+    {
+        if (itr -> Uzytkownik :: pobierzId() == idZalogowanegoUzytkownika)
+        {
+            itr -> Uzytkownik :: ustawHaslo(noweHaslo);
+            cout << "Haslo zostalo zmienione." << endl << endl;
+            system("pause");
+        }
+    }
+    plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
+}
+
+/* przenies do plikuZUzytkownikami
+void UzytkownikMenadzer :: zapiszWszystkichUzytkownikowDoPliku()
+{
+    //fstream plikTekstowy;
+    string liniaZDanymiUzytkownika = "";
+    vector <Uzytkownik>::iterator itrKoniec = --uzytkownicy.end();
+
+    plikTekstowy.open(nazwaPlikuZUzytkownikami.c_str(), ios::out);
+
+    if (plikTekstowy.good() == true)
+    {
+        for (vector <Uzytkownik>::iterator itr = uzytkownicy.begin(); itr != uzytkownicy.end(); itr++)
+        {
+            liniaZDanymiUzytkownika = zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(*itr);
+
+            if (itr == itrKoniec)
+            {
+               plikTekstowy << liniaZDanymiUzytkownika;
+            }
+            else
+            {
+                plikTekstowy << liniaZDanymiUzytkownika << endl;
+            }
+            liniaZDanymiUzytkownika = "";
+        }
+        plikTekstowy.close();
+    }
+    else
+    {
+        cout << "Nie mozna otworzyc pliku " << nazwaPlikuZUzytkownikami << endl;
+    }
+}
+*/
