@@ -18,6 +18,7 @@ public:
     };
     void rejestracjaUzytkownika ();
     void wypiszWszystkichUzytkonikow ();
-
+    //int logowanieUzytkownika (vector <Uzytkownik> &uzytkownicy);
+    int logowanieUzytkownika();
 };
 #endif // KSIAZKAADRESOWA_H
