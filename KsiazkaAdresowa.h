@@ -20,5 +20,6 @@ public:
     void wypiszWszystkichUzytkonikow ();
     //int logowanieUzytkownika (vector <Uzytkownik> &uzytkownicy);
     int logowanieUzytkownika();
+    void zmianaHaslaZalogowanegoUzytkownika();
 };
 #endif // KSIAZKAADRESOWA_H

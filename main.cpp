@@ -12,6 +12,7 @@ int main()
     //ksiazkaadresowa.rejestracjaUzytkownika();
 //    ksiazkaadresowa.logowanieUzytkownika(uzytkownicy);
     ksiazkaadresowa.logowanieUzytkownika();
+    ksiazkaadresowa.zmianaHaslaZalogowanegoUzytkownika();
     ksiazkaadresowa.wypiszWszystkichUzytkonikow();
     return 0;
 }
