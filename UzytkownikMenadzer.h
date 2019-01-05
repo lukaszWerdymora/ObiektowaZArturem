@@ -25,6 +25,8 @@ public:
     void wypiszWszystkichUzytkownikow();
     int logowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika(/*int idZalogowanegoUzytkownika*/);
-    //void zapiszWszystkichUzytkownikowDoPliku(); prznenies do pliku z uzytkonikami.
+    void wylogowanie ();
+    void wypiszUzytkownikowTestNaWylogowanie();
+
 };
 #endif // UZYTKOWNIKMENADZER_H
