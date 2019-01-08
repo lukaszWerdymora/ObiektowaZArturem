@@ -28,5 +28,7 @@ public:
     void wylogowanie ();
     void wypiszUzytkownikowTestNaWylogowanie();
 
+
+
 };
 #endif // UZYTKOWNIKMENADZER_H

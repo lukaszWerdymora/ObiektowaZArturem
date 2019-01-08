@@ -1,0 +1,2 @@
+1|1|Wawrzyn|Literat|Garwolin|12345679|w@wp.pl|
+2|2|Ela|Wis|Warszawa ul.Koty 45|12345622|elaW@wp.pl|

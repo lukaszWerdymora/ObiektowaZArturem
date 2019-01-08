@@ -10,7 +10,7 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkonikow(){
 }
 int KsiazkaAdresowa::logowanieUzytkownika (){
 
-    uzytkownikMenadzer.logowanieUzytkownika();
+   idZalogowanegoUzytkownika = uzytkownikMenadzer.logowanieUzytkownika();
 }
 void KsiazkaAdresowa :: zmianaHaslaZalogowanegoUzytkownika(){
 
@@ -19,4 +19,14 @@ void KsiazkaAdresowa :: zmianaHaslaZalogowanegoUzytkownika(){
 }
 void KsiazkaAdresowa :: wylogowanie(){
     uzytkownikMenadzer.wylogowanie();
+}
+void KsiazkaAdresowa :: wczytajAdresatowZalogowanegoUzytkownikaZPliku (){
+    adresatMenadzer.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
+}
+
+void KsiazkaAdresowa :: wypiszAdresatowZalogowanegoUzytkownika(){
+    adresatMenadzer.wypiszAdresatowZalogowanegoUzytkownika();
+}
+void KsiazkaAdresowa :: dodajAdresataDoVectora(){
+    adresatMenadzer.dodajAdresataDoVectora(idZalogowanegoUzytkownika);
 }
