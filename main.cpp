@@ -12,10 +12,10 @@ int main()
     //ksiazkaadresowa.rejestracjaUzytkownika();
 //    ksiazkaadresowa.logowanieUzytkownika(uzytkownicy);
     ksiazkaadresowa.logowanieUzytkownika();
-    ksiazkaadresowa.zmianaHaslaZalogowanegoUzytkownika();
-    ksiazkaadresowa.wylogowanie();
-    ksiazkaadresowa.zmianaHaslaZalogowanegoUzytkownika();
-    ksiazkaadresowa.wypiszWszystkichUzytkonikow();
+    ksiazkaadresowa.wczytajAdresatowZalogowanegoUzytkownikaZPliku();
+    ksiazkaadresowa.wypiszAdresatowZalogowanegoUzytkownika();
+    ksiazkaadresowa.dodajAdresataDoVectora();
+    ksiazkaadresowa.wypiszAdresatowZalogowanegoUzytkownika();
     return 0;
 }
 

@@ -6,10 +6,13 @@
 
 //#include "Uzytkownik.h"
 #include "UzytkownikMenadzer.h"
+#include "AdresatMenadzer.h"
 using namespace std;
 
 class KsiazkaAdresowa {
     UzytkownikMenadzer uzytkownikMenadzer;
+    AdresatMenadzer adresatMenadzer;
+    int idZalogowanegoUzytkownika;
 
 public:
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami) :uzytkownikMenadzer(nazwaPlikuZUzytkownikami)
@@ -22,5 +25,8 @@ public:
     int logowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
     void wylogowanie();
+    void wczytajAdresatowZalogowanegoUzytkownikaZPliku ();
+    void wypiszAdresatowZalogowanegoUzytkownika();
+    void dodajAdresataDoVectora();
 };
 #endif // KSIAZKAADRESOWA_H
