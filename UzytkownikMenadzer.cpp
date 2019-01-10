@@ -131,5 +131,6 @@ void UzytkownikMenadzer :: wylogowanie(){
 
 }
 
-
-
+int UzytkownikMenadzer :: pobierzIdZalowanegoUzytkownika(){
+    return idZalogowanegoUzytkownikal;
+}

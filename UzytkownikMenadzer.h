@@ -27,7 +27,7 @@ public:
     void zmianaHaslaZalogowanegoUzytkownika(/*int idZalogowanegoUzytkownika*/);
     void wylogowanie ();
     void wypiszUzytkownikowTestNaWylogowanie();
-
+    int pobierzIdZalowanegoUzytkownika();
 
 
 };
