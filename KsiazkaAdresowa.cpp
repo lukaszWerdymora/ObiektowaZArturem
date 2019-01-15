@@ -8,9 +8,14 @@ void KsiazkaAdresowa::rejestracjaUzytkownika(){
 void KsiazkaAdresowa::wypiszWszystkichUzytkonikow(){
     uzytkownikMenadzer.wypiszWszystkichUzytkownikow();
 }
-int KsiazkaAdresowa::logowanieUzytkownika (){
+void KsiazkaAdresowa::logowanieUzytkownika (){
 
-   idZalogowanegoUzytkownika = uzytkownikMenadzer.logowanieUzytkownika();
+   uzytkownikMenadzer.logowanieUzytkownika();
+   if (uzytkownikMenadzer.czyUzytkownikJestZalogowany()){
+    adresatMenadzer = new AdresatMenadzer(NAZWA_PLIKU_Z_ADRESATAMI,uzytkownikMenadzer.pobierzIdZalowanegoUzytkownika());
+
+   }
+
 }
 void KsiazkaAdresowa :: zmianaHaslaZalogowanegoUzytkownika(){
 
@@ -19,14 +24,19 @@ void KsiazkaAdresowa :: zmianaHaslaZalogowanegoUzytkownika(){
 }
 void KsiazkaAdresowa :: wylogowanie(){
     uzytkownikMenadzer.wylogowanie();
+    delete adresatMenadzer;
+    adresatMenadzer=NULL;
 }
 void KsiazkaAdresowa :: wczytajAdresatowZalogowanegoUzytkownikaZPliku (){
-    adresatMenadzer.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
+    adresatMenadzer->wczytajAdresatowZalogowanegoUzytkownikaZPliku(uzytkownikMenadzer.pobierzIdZalowanegoUzytkownika());
 }
 
 void KsiazkaAdresowa :: wypiszAdresatowZalogowanegoUzytkownika(){
-    adresatMenadzer.wypiszAdresatowZalogowanegoUzytkownika();
+    adresatMenadzer->wypiszAdresatowZalogowanegoUzytkownika();
 }
 void KsiazkaAdresowa :: dodajAdresataDoVectora(){
-    adresatMenadzer.dodajAdresataDoVectora(idZalogowanegoUzytkownika);
+    adresatMenadzer->dodajAdresataDoVectora(idZalogowanegoUzytkownika);
+}
+void KsiazkaAdresowa :: dopiszAdresata(){
+    adresatMenadzer->dodajAdresata();
 }

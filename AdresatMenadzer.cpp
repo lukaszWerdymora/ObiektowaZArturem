@@ -1,11 +1,6 @@
 #include "AdresatMenadzer.h"
 
-//musi byc konstruktor
-/*
-AdresatMenadzer :: AdresatMenadzer(){
 
-}
-*/
 void AdresatMenadzer :: wczytajAdresatowZalogowanegoUzytkownikaZPliku ( int idZalogowanegoUzytkownika){
     adresaci=plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku ( idZalogowanegoUzytkownika);
 }
@@ -20,15 +15,7 @@ void AdresatMenadzer :: wypiszAdresatowZalogowanegoUzytkownika(){
         cout<<adresaci[i].pobierzEmail()<<'|'<<endl;
     }
 }
-/*
-    for (int i=0; i<uzytkownicy.size(); i++) {
 
-        cout<<uzytkownicy[i].pobierzId()<<'|';
-        cout<<uzytkownicy[i].pobierzLogin()<<'|';
-        cout<<uzytkownicy[i].pobierzHaslo()<<'|'<<endl;
-
-    }
-    */
 void AdresatMenadzer :: dodajAdresataDoVectora (int idZalogowanegoUzytkownika){
     Adresat adresat;
 
@@ -46,14 +33,46 @@ void AdresatMenadzer :: dodajAdresataDoVectora (int idZalogowanegoUzytkownika){
 
     system("pause");
 }
+void AdresatMenadzer :: dodajAdresata(){
+    Adresat adresat;
+    adresat= podajDaneNowegoAdresata();
+    adresaci.push_back(adresat);
+    plikZAdresatami.dopiszAdresataDoPliku(adresat);
 
-/*
-void ustawId            (int noweId);
-    void ustawIdUzytkownika (int nowyIdUzytkownika);
-    void ustawImie          (string noweImie);
-    void ustawNazwisko      (string noweNazwisko);
-    void ustawNumerTelefonu (string nowyNumerTelefonu);
-    void ustawEmail         (string nowyEmail);
-    void ustawAdres         (string nowyAdres);
 
-*/
+    cout<<"Nowy adresat dodany\n";
+    system("pause");
+}
+Adresat AdresatMenadzer :: podajDaneNowegoAdresata(){
+    Adresat adresat;
+    string daneAdresata;
+    adresat.ustawId(plikZAdresatami.pobierzIdOstatniegoAdresata()+1);
+    adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
+    cout<<"Podaj dane nowego adresata\nImie: ";
+    cin>>daneAdresata;
+    adresat.ustawImie(daneAdresata);
+    daneAdresata="";
+
+    cout<<"Nazwisko: ";
+    cin>>daneAdresata;
+    adresat.ustawNazwisko(daneAdresata);
+    daneAdresata="";
+
+    cout<<"Adres: ";
+    cin>>daneAdresata;
+    adresat.ustawAdres(daneAdresata);
+    daneAdresata="";
+
+    cout<<"Numer telefonu: ";
+    cin>>daneAdresata;
+    adresat.ustawNumerTelefonu(daneAdresata);
+    daneAdresata="";
+
+    cout<<"Adres email: ";
+    cin>>daneAdresata;
+    adresat.ustawEmail(daneAdresata);
+    daneAdresata="";
+
+    return adresat;
+}
+

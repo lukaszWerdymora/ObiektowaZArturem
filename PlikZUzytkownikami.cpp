@@ -78,7 +78,7 @@ string PlikZUzytkownikami :: zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionow
 
     return liniaZDanymiUzytkownika;
 }
-//moje moje moje moje
+
 
 vector <Uzytkownik> PlikZUzytkownikami::wczytajUzytkownikowZPliku(){
     Uzytkownik uzytkownik;

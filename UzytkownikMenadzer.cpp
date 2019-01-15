@@ -132,5 +132,12 @@ void UzytkownikMenadzer :: wylogowanie(){
 }
 
 int UzytkownikMenadzer :: pobierzIdZalowanegoUzytkownika(){
-    return idZalogowanegoUzytkownikal;
+    return idZalogowanegoUzytkownika;
+}
+bool UzytkownikMenadzer :: czyUzytkownikJestZalogowany(){
+    if (idZalogowanegoUzytkownika > 0)
+        return true;
+    else {
+        return false;
+    }
 }
