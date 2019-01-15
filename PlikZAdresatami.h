@@ -11,19 +11,25 @@
 using namespace std;
 
 class PlikZAdresatami {
-    string nazwaPlikuZAdresatami;
+
+    const string NAZWA_PLIKU_Z_ADRESATAMI;
     fstream plikTekstowy;
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
-    int idOstatniegoAdresataZalogowanegoUzytkownika;// proba przeslania Id ostaniego adresata
+    int idOstatniegoAdresata;;// proba przeslania Id ostaniego adresata
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
     string pobierzLiczbe(string tekst, int pozycjaZnaku);
+    int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
+    string zamienDaneAdresataNaLinieZDanymiOddzielonaPionowymiKreskami(Adresat adresat);
+    bool czyPlikJestPusty();
 
 public:
-    //PlikZAdresatami (string NAZWAPLIKUZADRESATAMI) : nazwaPlikuZAdresatami (NAZWAPLIKUZADRESATAMI){};
-    //PlikZAdresatami(string NAZWAPLIKUZADRESATAMI): nazwaPlikuZAdresatami (NAZWAPLIKUZADRESATAMI){};
-    PlikZAdresatami();
+    PlikZAdresatami (string nazwaPlikuZAdresatami) : NAZWA_PLIKU_Z_ADRESATAMI (nazwaPlikuZAdresatami){
+        idOstatniegoAdresata=0;
+    };
+
     vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku (int idZalogowanegoUzytkownika);
-    int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
+    void dopiszAdresataDoPliku( Adresat adresat);
+    int pobierzIdOstatniegoAdresata();
 
 };
 #endif // PLIKZADRESATAMI_H

@@ -14,15 +14,15 @@ class AdresatMenadzer {
     vector <Adresat> adresaci;
     //int idZalogowanegoUzytkownika;// dlaczego to dziala
     PlikZAdresatami plikZAdresatami;
+    Adresat podajDaneNowegoAdresata();
+    int ID_ZALOGOWANEGO_UZYTKOWNIKA;
 
 public:
-    //musi byc konstruktor
-    //AdresatMenadzer();
-    //AdresatMenadzer (string nazawaPlikuZAdresatami) : plikZAdresatami (nazawaPlikuZAdresatami){};
-    //UzytkownikMenadzer (string nazwaPlikuZUzytkonikami) : plikZUzytkownikami (nazwaPlikuZUzytkonikami){};
+    AdresatMenadzer (string nazwaPlikuZAdresatami, int idZalogowanegoUzytkonika) : plikZAdresatami (nazwaPlikuZAdresatami), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkonika){};
     void wczytajAdresatowZalogowanegoUzytkownikaZPliku (int idZalogowanegoUzytkownika);
     void wypiszAdresatowZalogowanegoUzytkownika();
     void dodajAdresataDoVectora(int idZalogowanegoUzytkownika);
+    void dodajAdresata ();
 
 
 };
