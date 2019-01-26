@@ -15,7 +15,7 @@ int main()
     ksiazkaadresowa.wypiszAdresatowZalogowanegoUzytkownika();
     //ksiazkaadresowa.dopiszAdresata();
     //ksiazkaadresowa.dopiszAdresata();
-    //ksiazkaadresowa.wyszukajAdresatowPoImieniu();
+    ksiazkaadresowa.wyszukajAdresatowPoImieniu();
     ksiazkaadresowa.wyszukajAdresatowPoNazwisku();
     //ksiazkaadresowa.wypiszAdresatowZalogowanegoUzytkownika();
 
