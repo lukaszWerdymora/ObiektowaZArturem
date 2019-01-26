@@ -98,7 +98,7 @@ void AdresatMenadzer :: wyszukajAdresatowPoImieniu() {
         imiePoszukiwanegoAdresata= MetodyPomocnicze ::zamienPierwszaLitereNaDuzaAPozostaleNaMale(imiePoszukiwanegoAdresata);
         for (int i=0; i<adresaci.size(); i++) {
             if (adresaci[i].pobierzImie()==imiePoszukiwanegoAdresata) {
-                        wypiszAdresata(i);
+                wypiszAdresata(i);
             }
         }
     } else {
@@ -106,12 +106,12 @@ void AdresatMenadzer :: wyszukajAdresatowPoImieniu() {
         cout<<"Ksiazka adresowa jest pusta\n";
     }
 }
-void AdresatMenadzer :: wypiszAdresata(int idAdresata){
-        cout<<adresaci[idAdresata].pobierzId()<<'|';
-        cout<<adresaci[idAdresata].pobierzImie()<<'|';
-        cout<<adresaci[idAdresata].pobierzNazwisko()<<'|';
-        cout<<adresaci[idAdresata].pobierzAdres()<<'|';
-        cout<<adresaci[idAdresata].pobierzNumerTelefonu()<<'|';
-        cout<<adresaci[idAdresata].pobierzEmail()<<'|'<<endl;
+void AdresatMenadzer :: wypiszAdresata(int idAdresata) {
+    cout<<adresaci[idAdresata].pobierzId()<<'|';
+    cout<<adresaci[idAdresata].pobierzImie()<<'|';
+    cout<<adresaci[idAdresata].pobierzNazwisko()<<'|';
+    cout<<adresaci[idAdresata].pobierzAdres()<<'|';
+    cout<<adresaci[idAdresata].pobierzNumerTelefonu()<<'|';
+    cout<<adresaci[idAdresata].pobierzEmail()<<'|'<<endl;
 }
 
