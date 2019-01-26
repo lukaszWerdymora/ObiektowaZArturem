@@ -16,6 +16,7 @@ int main()
     //ksiazkaadresowa.dopiszAdresata();
     //ksiazkaadresowa.dopiszAdresata();
     ksiazkaadresowa.wyszukajAdresatowPoImieniu();
+    //ksiazkaadresowa.wyszukajAdresatowPoNazwisku();
     //ksiazkaadresowa.wypiszAdresatowZalogowanegoUzytkownika();
 
     return 0;
