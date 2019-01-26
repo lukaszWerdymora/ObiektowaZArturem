@@ -13,6 +13,7 @@ class MetodyPomocnicze {
 public:
 static string konwerjsaIntNaString(int liczba);
 static int konwersjaStringNaInt (string sLiczba);
+static string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
 
 };
 #endif // METODYPOMOCNICZE_H

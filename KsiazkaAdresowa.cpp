@@ -40,3 +40,6 @@ void KsiazkaAdresowa :: dodajAdresataDoVectora(){
 void KsiazkaAdresowa :: dopiszAdresata(){
     adresatMenadzer->dodajAdresata();
 }
+void KsiazkaAdresowa :: wyszukajAdresatowPoImieniu(){
+    adresatMenadzer->wyszukajAdresatowPoImieniu();
+}

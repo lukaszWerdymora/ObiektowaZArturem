@@ -12,10 +12,11 @@ int main()
 
     ksiazkaadresowa.logowanieUzytkownika();
     ksiazkaadresowa.wczytajAdresatowZalogowanegoUzytkownikaZPliku();
-    ksiazkaadresowa.wypiszAdresatowZalogowanegoUzytkownika();
-    ksiazkaadresowa.dopiszAdresata();
-    ksiazkaadresowa.dopiszAdresata();
-    ksiazkaadresowa.wypiszAdresatowZalogowanegoUzytkownika();
+    //ksiazkaadresowa.wypiszAdresatowZalogowanegoUzytkownika();
+    //ksiazkaadresowa.dopiszAdresata();
+    //ksiazkaadresowa.dopiszAdresata();
+    ksiazkaadresowa.wyszukajAdresatowPoImieniu();
+    //ksiazkaadresowa.wypiszAdresatowZalogowanegoUzytkownika();
 
     return 0;
 }
