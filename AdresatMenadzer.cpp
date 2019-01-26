@@ -14,6 +14,7 @@ void AdresatMenadzer :: wypiszAdresatowZalogowanegoUzytkownika() {
         cout<<adresaci[i].pobierzNumerTelefonu()<<'|';
         cout<<adresaci[i].pobierzEmail()<<'|'<<endl;
     }
+    system("pause");
 }
 
 void AdresatMenadzer :: dodajAdresataDoVectora (int idZalogowanegoUzytkownika) {
@@ -113,37 +114,4 @@ void AdresatMenadzer :: wypiszAdresata(int idAdresata){
         cout<<adresaci[idAdresata].pobierzNumerTelefonu()<<'|';
         cout<<adresaci[idAdresata].pobierzEmail()<<'|'<<endl;
 }
-/*
-void wyszukajAdresatowPoImieniu(vector <Adresat> &adresaci)
-{
-    string imiePoszukiwanegoAdresata = "";
-    int iloscAdresatow = 0;
 
-    system("cls");
-    if (!adresaci.empty())
-    {
-        cout << ">>> WYSZUKIWANIE ADRESATOW O IMIENIU <<<" << endl << endl;
-
-        cout << "Wyszukaj adresatow o imieniu: ";
-        imiePoszukiwanegoAdresata = wczytajLinie();
-        imiePoszukiwanegoAdresata = zamienPierwszaLitereNaDuzaAPozostaleNaMale(imiePoszukiwanegoAdresata);
-
-        for (vector <Adresat>::iterator  itr = adresaci.begin(); itr != adresaci.end(); itr++)
-        {
-            if (itr -> imie == imiePoszukiwanegoAdresata)
-            {
-                wyswietlDaneAdresata(*itr);
-                iloscAdresatow++;
-            }
-        }
-        wyswietlIloscWyszukanychAdresatow(iloscAdresatow);
-    }
-    else
-    {
-        cout << endl << "Ksiazka adresowa jest pusta" << endl << endl;
-    }
-    cout << endl;
-    system("pause");
-}
-
-*/
