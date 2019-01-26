@@ -106,6 +106,27 @@ void AdresatMenadzer :: wyszukajAdresatowPoImieniu() {
         cout<<"Ksiazka adresowa jest pusta\n";
     }
 }
+void AdresatMenadzer :: wyszukajAdresatowPoNazwisku() {
+    string nazwiskoPoszukiwanegoAdresata="";
+    system ("cls");
+    cin.clear();
+    cin.ignore(1000, '\n');
+
+    if (!adresaci.empty()) {
+        cout << ">>> WYSZUKIWANIE ADRESATOW O NAZWISKU <<<" << endl << endl;
+        cout << "Wyszukaj adresatow o nazwisku: ";
+        getline (cin, nazwiskoPoszukiwanegoAdresata);
+        nazwiskoPoszukiwanegoAdresata= MetodyPomocnicze ::zamienPierwszaLitereNaDuzaAPozostaleNaMale(nazwiskoPoszukiwanegoAdresata);
+        for (int i=0; i<adresaci.size(); i++) {
+            if (adresaci[i].pobierzNazwisko()==nazwiskoPoszukiwanegoAdresata) {
+                wypiszAdresata(i);
+            }
+        }
+    } else {
+
+        cout<<"Ksiazka adresowa jest pusta\n";
+    }
+}
 void AdresatMenadzer :: wypiszAdresata(int idAdresata) {
     cout<<adresaci[idAdresata].pobierzId()<<'|';
     cout<<adresaci[idAdresata].pobierzImie()<<'|';

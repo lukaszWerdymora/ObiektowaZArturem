@@ -43,3 +43,6 @@ void KsiazkaAdresowa :: dopiszAdresata(){
 void KsiazkaAdresowa :: wyszukajAdresatowPoImieniu(){
     adresatMenadzer->wyszukajAdresatowPoImieniu();
 }
+void KsiazkaAdresowa :: wyszukajAdresatowPoNazwisku(){
+    adresatMenadzer-> wyszukajAdresatowPoNazwisku();
+}

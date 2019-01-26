@@ -37,5 +37,6 @@ public:
     void dodajAdresataDoVectora();
     void dopiszAdresata();
     void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
 };
 #endif // KSIAZKAADRESOWA_H

@@ -25,6 +25,7 @@ public:
     void dodajAdresataDoVectora(int idZalogowanegoUzytkownika);
     void dodajAdresata ();
     void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
 
 };
 #endif // ADRESATMENADZER_H
