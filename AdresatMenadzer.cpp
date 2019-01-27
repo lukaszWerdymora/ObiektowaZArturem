@@ -127,6 +127,129 @@ void AdresatMenadzer :: wyszukajAdresatowPoNazwisku() {
         cout<<"Ksiazka adresowa jest pusta\n";
     }
 }
+int AdresatMenadzer :: usunAdresata() {
+    int idUsuwanegoAdresata = 0;
+    int numerLiniiUsuwanegoAdresata = 0;
+
+    system("cls");
+    cout << ">>> USUWANIE WYBRANEGO ADRESATA <<<" << endl << endl;
+    idUsuwanegoAdresata = podajIdWybranegoAdresata();
+    char znak;
+    bool czyIstniejeAdresat = false;
+
+    for (int i=0; i<adresaci.size(); i++) {
+        if (adresaci[i].pobierzId()==idUsuwanegoAdresata) {
+            czyIstniejeAdresat=true;
+            cout<<endl<<"Potwierdz wciskajac 't': ";
+            znak = wczytajZnak();
+            if (znak=='t') {
+                cout<< "Znalzalem ID i chce go usunac "<<idUsuwanegoAdresata<<endl;
+                wypiszAdresata(idUsuwanegoAdresata-1);
+                numerLiniiUsuwanegoAdresata = plikZAdresatami.zwrocNumerLiniiSzukanegoAdresata(idUsuwanegoAdresata);
+                plikZAdresatami.usunWybranaLinieWPliku(numerLiniiUsuwanegoAdresata);
+                adresaci.erase(adresaci.begin()+i);
+                cout << endl << endl << "Szukany adresat zostal USUNIETY" << endl << endl;
+                system("pause");
+                return idUsuwanegoAdresata;
+
+            } else {
+                cout << endl << endl << "Wybrany adresat NIE zostal usuniety" << endl << endl;
+                system("pause");
+                return 0;
+            }
+        }
+    }
+    if (czyIstniejeAdresat==false){
+        cout << endl << "Nie ma takiego adresata w ksiazce adresowej" << endl << endl;
+        system("pause");
+    }
+    return 0;
+}
+
+/*
+int usunAdresata(vector <Adresat> &adresaci)
+{
+
+    char znak;
+    bool czyIstniejeAdresat = false;
+
+    for (vector <Adresat>::iterator itr = adresaci.begin(); itr != adresaci.end(); itr++)
+    {
+        if (itr -> id == idUsuwanegoAdresata)
+        {
+            czyIstniejeAdresat = true;
+            cout << endl << "Potwierdz naciskajac klawisz 't': ";
+            znak = wczytajZnak();
+            if (znak == 't')
+            {
+                numerLiniiUsuwanegoAdresata = zwrocNumerLiniiSzukanegoAdresata(idUsuwanegoAdresata);
+                usunWybranaLinieWPliku(numerLiniiUsuwanegoAdresata);
+                adresaci.erase(itr);
+                cout << endl << endl << "Szukany adresat zostal USUNIETY" << endl << endl;
+                system("pause");
+                return idUsuwanegoAdresata;
+            }
+            else
+            {
+                cout << endl << endl << "Wybrany adresat NIE zostal usuniety" << endl << endl;
+                system("pause");
+                return 0;
+            }
+        }
+    }
+    if (czyIstniejeAdresat == false)
+    {
+        cout << endl << "Nie ma takiego adresata w ksiazce adresowej" << endl << endl;
+        system("pause");
+    }
+    return 0;
+}
+*/
+char AdresatMenadzer :: wczytajZnak() {
+    string wejscie = "";
+    char znak  = {0};
+
+    while (true) {
+        getline(cin, wejscie);
+
+        if (wejscie.length() == 1) {
+            znak = wejscie[0];
+            break;
+        }
+        cout << "To nie jest pojedynczy znak. Wpisz ponownie." << endl;
+    }
+    return znak;
+}
+
+int AdresatMenadzer :: podajIdWybranegoAdresata() {
+    int idWybranegoAdresata = 0;
+    cout << "Podaj numer ID Adresata: ";
+    idWybranegoAdresata  = wczytajLiczbeCalkowita();
+    return idWybranegoAdresata;
+}
+
+int AdresatMenadzer :: wczytajLiczbeCalkowita() {
+    cin.clear();
+    cin.ignore(1000, '\n');
+
+    string wejscie = "";
+    int liczba = 0;
+
+    while (true) {
+        getline(cin, wejscie);
+
+        stringstream myStream(wejscie);
+        if (myStream >> liczba) {
+            break;
+        } else {
+            cout << "To nie jest liczba. Wpisz ponownie. " << endl;
+        }
+
+
+    }
+    return liczba;
+}
+
 void AdresatMenadzer :: wypiszAdresata(int idAdresata) {
     cout<<adresaci[idAdresata].pobierzId()<<'|';
     cout<<adresaci[idAdresata].pobierzImie()<<'|';
