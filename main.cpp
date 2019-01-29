@@ -17,7 +17,10 @@ int main()
     //ksiazkaadresowa.dopiszAdresata();
     //ksiazkaadresowa.wyszukajAdresatowPoImieniu();
     //ksiazkaadresowa.wyszukajAdresatowPoNazwisku();
-    ksiazkaadresowa.usunAdresata();
+    //ksiazkaadresowa.usunAdresata();
+    ksiazkaadresowa.edytujAdresata();
+    ksiazkaadresowa.wypiszAdresatowZalogowanegoUzytkownika();
+
 
     return 0;
 }
