@@ -8,6 +8,7 @@
 #include <fstream>
 
 
+
 using namespace std;
 
 class PlikZAdresatami {
@@ -22,6 +23,10 @@ class PlikZAdresatami {
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     string zamienDaneAdresataNaLinieZDanymiOddzielonaPionowymiKreskami(Adresat adresat);
     bool czyPlikJestPusty();
+    //void zaktualizujDaneEdytowanegoAdresata(int idEdytowanegoAdresata);// to moze bêdzie publiczne
+    void edytujWybranaLinieWPliku(int numerEdytowanejLinii, string liniaZDanymiAdresataOddzielonePionowymiKreskami);
+    string pobierzLinieZPlikuAdresaci (int numerLinii);// pobiera linie do zmiany danych adresata
+
 
 
 
@@ -37,6 +42,8 @@ public:
     void usunWybranaLinieWPliku(int numerUsuwanejLinii);
     void usunOdczytywanyPlik(string nazwaPlikuZRozszerzeniem);
     void zmienNazweTymczasowegoPlikuNaNazweOdczytywanegoPliku(string nazwaTymczasowegoPlikuZRozszerzeniem, string nazwaPlikuZRozszerzeniem);
+    void zaktualizujDaneEdytowanegoAdresata(Adresat adresat, int idEdytowanegoAdresata);
+
 
 };
 #endif // PLIKZADRESATAMI_H
