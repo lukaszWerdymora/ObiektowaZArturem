@@ -179,6 +179,7 @@ int PlikZAdresatami :: zwrocNumerLiniiSzukanegoAdresata(int idAdresata)
     }
     return 0;
 }
+
 void PlikZAdresatami :: usunWybranaLinieWPliku(int numerUsuwanejLinii)
 {
     fstream odczytywanyPlikTekstowy, tymczasowyPlikTekstowy;

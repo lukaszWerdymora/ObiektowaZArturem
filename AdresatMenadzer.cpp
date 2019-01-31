@@ -138,6 +138,7 @@ int AdresatMenadzer :: usunAdresata() {
     bool czyIstniejeAdresat = false;
 
     for (int i=0; i<adresaci.size(); i++) {
+
         if (adresaci[i].pobierzId()==idUsuwanegoAdresata) {
             czyIstniejeAdresat=true;
             cout<<endl<<"Potwierdz wciskajac 't': ";
