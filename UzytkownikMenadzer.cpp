@@ -78,7 +78,8 @@ int UzytkownikMenadzer :: logowanieUzytkownika()
     string login = "", haslo = "";
 
     cout << endl << "Podaj login: ";
-    cin >> login;
+    //cin >> login;
+    login="z";
 
     vector <Uzytkownik>::iterator itr = uzytkownicy.begin();
     while (itr != uzytkownicy.end())
@@ -88,7 +89,8 @@ int UzytkownikMenadzer :: logowanieUzytkownika()
             for (int iloscProb = 3; iloscProb > 0; iloscProb--)
             {
                 cout << "Podaj haslo. Pozostalo prob: " << iloscProb << ": ";
-                cin >> haslo;
+                //cin >> haslo;
+                haslo="x";
 
                 if (itr -> Uzytkownik :: pobierzHaslo()  == haslo)
                 {

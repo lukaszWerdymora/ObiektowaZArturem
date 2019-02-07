@@ -133,7 +133,8 @@ int AdresatMenadzer :: usunAdresata() {
 
     system("cls");
     cout << ">>> USUWANIE WYBRANEGO ADRESATA <<<" << endl << endl;
-    idUsuwanegoAdresata = podajIdWybranegoAdresata();
+    //idUsuwanegoAdresata = podajIdWybranegoAdresata();
+    idUsuwanegoAdresata=12;
     char znak;
     bool czyIstniejeAdresat = false;
 
@@ -145,9 +146,10 @@ int AdresatMenadzer :: usunAdresata() {
             znak = wczytajZnak();
             if (znak=='t') {
                 cout<< "Znalzalem ID i chce go usunac "<<idUsuwanegoAdresata<<endl;
-                wypiszAdresata(idUsuwanegoAdresata-1);
-                numerLiniiUsuwanegoAdresata = plikZAdresatami.zwrocNumerLiniiSzukanegoAdresata(idUsuwanegoAdresata);
-                plikZAdresatami.usunWybranaLinieWPliku(numerLiniiUsuwanegoAdresata);
+                wypiszAdresata(idUsuwanegoAdresata);
+                //numerLiniiUsuwanegoAdresata = plikZAdresatami.zwrocNumerLiniiSzukanegoAdresata(idUsuwanegoAdresata);
+                //plikZAdresatami.usunWybranaLinieWPliku(numerLiniiUsuwanegoAdresata);
+                plikZAdresatami.usunAdresataZPliku(idUsuwanegoAdresata);
                 adresaci.erase(adresaci.begin()+i);
                 cout << endl << endl << "Szukany adresat zostal USUNIETY" << endl << endl;
                 system("pause");
@@ -266,6 +268,7 @@ char AdresatMenadzer :: wczytajZnak() {
 }
 
 int AdresatMenadzer :: podajIdWybranegoAdresata() {
+
     int idWybranegoAdresata = 0;
     cout << "Podaj numer ID Adresata: ";
     idWybranegoAdresata  = wczytajLiczbeCalkowita();
@@ -291,16 +294,30 @@ int AdresatMenadzer :: wczytajLiczbeCalkowita() {
 
 
     }
+
+
     return liczba;
 }
 
 void AdresatMenadzer :: wypiszAdresata(int idAdresata) {
+    for (int i=0; i<adresaci.size(); i++){
+        if (idAdresata==adresaci[i].pobierzId()){
+    cout<<adresaci[i].pobierzId()<<'|';
+    cout<<adresaci[i].pobierzImie()<<'|';
+    cout<<adresaci[i].pobierzNazwisko()<<'|';
+    cout<<adresaci[i].pobierzAdres()<<'|';
+    cout<<adresaci[i].pobierzNumerTelefonu()<<'|';
+    cout<<adresaci[i].pobierzEmail()<<'|'<<endl;
+        }
+    }
+    /*
     cout<<adresaci[idAdresata].pobierzId()<<'|';
     cout<<adresaci[idAdresata].pobierzImie()<<'|';
     cout<<adresaci[idAdresata].pobierzNazwisko()<<'|';
     cout<<adresaci[idAdresata].pobierzAdres()<<'|';
     cout<<adresaci[idAdresata].pobierzNumerTelefonu()<<'|';
     cout<<adresaci[idAdresata].pobierzEmail()<<'|'<<endl;
+    */
 }
 char AdresatMenadzer :: wybierzOpcjeZMenuEdycja() {
     char wybor;

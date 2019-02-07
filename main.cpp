@@ -7,6 +7,7 @@ int main()
 {
 
     KsiazkaAdresowa ksiazkaadresowa ("Uzytkownicy1.txt", "Adresaci.txt");
+
     //ksiazkaadresowa.wypiszWszystkichUzytkonikow();
 
 
@@ -14,12 +15,13 @@ int main()
     ksiazkaadresowa.wczytajAdresatowZalogowanegoUzytkownikaZPliku();
     ksiazkaadresowa.wypiszAdresatowZalogowanegoUzytkownika();
     //ksiazkaadresowa.dopiszAdresata();
-    //ksiazkaadresowa.dopiszAdresata();
+
     //ksiazkaadresowa.wyszukajAdresatowPoImieniu();
     //ksiazkaadresowa.wyszukajAdresatowPoNazwisku();
     ksiazkaadresowa.usunAdresata();
+
     //ksiazkaadresowa.edytujAdresata();
-    ksiazkaadresowa.wypiszAdresatowZalogowanegoUzytkownika();
+    //ksiazkaadresowa.wypiszAdresatowZalogowanegoUzytkownika();
 
 
     return 0;

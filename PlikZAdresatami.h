@@ -17,7 +17,7 @@ class PlikZAdresatami {
     string nazwaTymczasowegoPlikuZAdresatami="Adresaci_Tymczasowy.txt";
     fstream plikTekstowy;
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
-    int idOstatniegoAdresata;;// proba przeslania Id ostaniego adresata
+    int idOstatniegoAdresata;// proba przeslania Id ostaniego adresata
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
     string pobierzLiczbe(string tekst, int pozycjaZnaku);
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
@@ -40,6 +40,7 @@ public:
     int pobierzIdOstatniegoAdresata();
     int zwrocNumerLiniiSzukanegoAdresata(int idAdresata);
     void usunWybranaLinieWPliku(int numerUsuwanejLinii);
+    void usunAdresataZPliku (int idUsuwanegoAdresata);
     void usunOdczytywanyPlik(string nazwaPlikuZRozszerzeniem);
     void zmienNazweTymczasowegoPlikuNaNazweOdczytywanegoPliku(string nazwaTymczasowegoPlikuZRozszerzeniem, string nazwaPlikuZRozszerzeniem);
     void zaktualizujDaneEdytowanegoAdresata(Adresat adresat, int idEdytowanegoAdresata);
