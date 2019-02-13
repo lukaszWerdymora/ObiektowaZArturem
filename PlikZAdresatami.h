@@ -23,9 +23,11 @@ class PlikZAdresatami {
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     string zamienDaneAdresataNaLinieZDanymiOddzielonaPionowymiKreskami(Adresat adresat);
     bool czyPlikJestPusty();
+
+    //smieci
     //void zaktualizujDaneEdytowanegoAdresata(int idEdytowanegoAdresata);// to moze bêdzie publiczne
-    void edytujWybranaLinieWPliku(int numerEdytowanejLinii, string liniaZDanymiAdresataOddzielonePionowymiKreskami);
-    string pobierzLinieZPlikuAdresaci (int numerLinii);// pobiera linie do zmiany danych adresata
+    //void edytujWybranaLinieWPliku(int numerEdytowanejLinii, string liniaZDanymiAdresataOddzielonePionowymiKreskami);
+    //string pobierzLinieZPlikuAdresaci (int numerLinii);// pobiera linie do zmiany danych adresata
 
 
 
@@ -43,7 +45,10 @@ public:
     void usunAdresataZPliku (int idUsuwanegoAdresata);
     void usunOdczytywanyPlik(string nazwaPlikuZRozszerzeniem);
     void zmienNazweTymczasowegoPlikuNaNazweOdczytywanegoPliku(string nazwaTymczasowegoPlikuZRozszerzeniem, string nazwaPlikuZRozszerzeniem);
-    void zaktualizujDaneEdytowanegoAdresata(Adresat adresat, int idEdytowanegoAdresata);
+    void aktulizacjaDanaychEdytowanegoAdresata (Adresat adresat, int idEdytowanegoAdresata);
+
+    ////////////// smieci
+    //void zaktualizujDaneEdytowanegoAdresata(Adresat adresat, int idEdytowanegoAdresata);
 
 
 };

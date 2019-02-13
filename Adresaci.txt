@@ -1,5 +1,5 @@
 1|1|Wawrzyn|Literat|Krakow|321654|waw@wp.pl|
-2|1|Ela|Wis|Warszawa ul.Koty 45|12345622|elaW@wp.pl|
+2|1|Bylejaki|Wis|Warszawa ul.Koty 45|12345622|elaW@wp.pl|
 3|1|Lukasz|Jaworski|sien|987456|ak@wp|
 4|1|4|4|4|4|4|
 5|1|5|5|5|5|5|
@@ -9,4 +9,4 @@
 9|1|Kasia|Jaworski|Sienl|234|asd|
 10|1|Ela|Wsiniewska|Jaworski|aasd|asd|
 11|1|Kacper|Literat|Asd|a|a|
-12|1|1|1|1|1|1|
+12|1|Miron blazej|Jawkorski|Asd|a|a|

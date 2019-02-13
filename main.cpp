@@ -18,10 +18,10 @@ int main()
 
     //ksiazkaadresowa.wyszukajAdresatowPoImieniu();
     //ksiazkaadresowa.wyszukajAdresatowPoNazwisku();
-    ksiazkaadresowa.usunAdresata();
+    //ksiazkaadresowa.usunAdresata();
 
-    //ksiazkaadresowa.edytujAdresata();
-    //ksiazkaadresowa.wypiszAdresatowZalogowanegoUzytkownika();
+    ksiazkaadresowa.edytujAdresata();
+    ksiazkaadresowa.wypiszAdresatowZalogowanegoUzytkownika();
 
 
     return 0;

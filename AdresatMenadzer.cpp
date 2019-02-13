@@ -133,8 +133,8 @@ int AdresatMenadzer :: usunAdresata() {
 
     system("cls");
     cout << ">>> USUWANIE WYBRANEGO ADRESATA <<<" << endl << endl;
-    //idUsuwanegoAdresata = podajIdWybranegoAdresata();
-    idUsuwanegoAdresata=12;
+    idUsuwanegoAdresata = podajIdWybranegoAdresata();
+
     char znak;
     bool czyIstniejeAdresat = false;
 
@@ -184,6 +184,7 @@ Adresat AdresatMenadzer :: edytujAdresata() {
     wybor = wybierzOpcjeZMenuEdycja();
 
     for (int i=0; i<adresaci.size(); i++) {
+
         if (adresaci[i].pobierzId() == idEdytowanegoAdresata) {
             czyIstniejeAdresat = true;
             tymczasowyAdresat=wczytajEdytowanegoAdresata(idEdytowanegoAdresata);
@@ -225,17 +226,20 @@ Adresat AdresatMenadzer :: edytujAdresata() {
                 default:
                 cout << endl << "Nie ma takiej opcji w menu! Powrot do menu uzytkownika." << endl << endl;
                 break;
+                return tymczasowyAdresat;
                 }
 
             }
+
         }
         if (czyIstniejeAdresat == false) {
             cout << endl << "Nie ma takiego adresata." << endl << endl;
+
         }
 
 
-    plikZAdresatami.zaktualizujDaneEdytowanegoAdresata(tymczasowyAdresat, idEdytowanegoAdresata);
-    return tymczasowyAdresat;
+    plikZAdresatami.aktulizacjaDanaychEdytowanegoAdresata(tymczasowyAdresat, idEdytowanegoAdresata);
+
     system("pause");
 }
 Adresat AdresatMenadzer :: wczytajEdytowanegoAdresata (int idEdytowanegoAdresata){
@@ -276,8 +280,8 @@ int AdresatMenadzer :: podajIdWybranegoAdresata() {
 }
 
 int AdresatMenadzer :: wczytajLiczbeCalkowita() {
-    cin.clear();
-    cin.ignore(1000, '\n');
+//    cin.clear();
+//    cin.ignore(1000, '\n');
 
     string wejscie = "";
     int liczba = 0;
@@ -291,10 +295,7 @@ int AdresatMenadzer :: wczytajLiczbeCalkowita() {
         } else {
             cout << "To nie jest liczba. Wpisz ponownie. " << endl;
         }
-
-
     }
-
 
     return liczba;
 }
